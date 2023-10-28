@@ -557,7 +557,7 @@ section {
 .section-header .section-description {
   text-align: center;
   padding-bottom: 40px;
-  color: #777;
+  color: #fff;
   font-style: italic;
   font-weight: bold
   ;
@@ -653,15 +653,18 @@ section {
 }
 
 #about .about-img img {
- margin-bottom: 20px;
+  margin-bottom: 20px;
   margin-left: auto; /* Adjusted margin */
   margin-right: auto;
   max-width: 100%;
+  width: 600px;
+  border-radius: 25px;
 }
 
 @media (max-width: 768px) {
   #about .about-img {
     height: auto;
+    width: auto;
   }
 
   #about .about-img img {
@@ -672,13 +675,13 @@ section {
 
 #about .content .h2 {
   margin-left: 0; /* Adjusted margin */
-  color: #333;
+  color: #fff;
   font-weight: 300;
   font-size: 1.5rem; 
 }
 
 #about .content h3 {
-  color: #777;
+  color: #fff;
   font-weight: 300;
   font-size: 1rem; /* Changed to rem for responsiveness */
   line-height: 1.5rem; /* Changed to rem for responsiveness */
@@ -695,8 +698,9 @@ section {
 
 #about .content i {
   font-size: 1.25rem; /* Changed to rem for responsiveness */
-  padding-right: 0.25rem; /* Adjusted padding */
   color: #f9a310;
+  vertical-align: middle;
+  margin-right: 10px;
 }
 
 #about .content ul {
@@ -705,8 +709,13 @@ section {
 }
 
 #about .content ul li {
+
   padding-bottom: 1rem;
+  display: flex;
+  align-items: center;
 }
+
+
 
 /* Product Featuress Section
 --------------------------------*/
@@ -742,6 +751,15 @@ section {
   
   
 }
+
+
+
+.select-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 
 #features .icon i {
   color: #666666;
@@ -1468,5 +1486,59 @@ section {
     width: 80px;
     height: 80px;
     font-size: large;
+  }
+}
+
+.cardHead {
+  margin-left: 80px;
+  font-size: 30px;
+}
+.cardHead2 {
+  margin-left: 130px;
+  font-size: 30px;
+}
+
+.cardSelect {
+  width: 100%;
+  height: 40px;
+  max-width: 200px; /* Added max-width to maintain responsiveness */
+  margin: 10px auto; /* Center the element on smaller screens */
+  border: 2px solid #f9a310;
+  color: #000;
+  background-color: #9da1a1;
+  border-radius: 10px;
+}
+
+.cardButton {
+  width: 100%;
+  height: 30px;
+  max-width: 120px; /* Added max-width to maintain responsiveness */
+  margin: 10px auto; /* Center the element on smaller screens */
+  background-color: #f9a310;
+  color: #000;
+  border-radius: 10px;
+}
+.cardButton:hover{
+  background-color:#ea9c165d ;
+}
+.cardImage{
+  width: 10%;
+  height: 10%;
+  border-radius: 50%;
+}
+/* Media Query for screens less than or equal to 768px (typical mobile devices) */
+@media (max-width: 768px) {
+  .cardHead {
+    margin-left: 10px; /* Reset margin */
+  }
+  .cardHead2 {
+    margin-left: 90px; /* Reset margin */
+  }
+  .cardSelect {
+    margin-left: 0; /* Reset margin */
+  }
+
+  .cardButton {
+    margin-left: 5px; /* Reset margin */
   }
 }

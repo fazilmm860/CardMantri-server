@@ -153,4 +153,169 @@ const closeModal=()=>{
 export default CallToAction
 
 
-1 
+  {/* <div className="flex flex-col items-center justify-center bg-black">
+  <section id="about" className="p-10">
+    <div className="flex flex-col items-center justify-center" >
+      <div className="section-header">
+        <h2 className="section-title text-white">Compare Card </h2>
+        <span className="section-divider"></span>
+      </div>
+      <div className="flex flex-col md:flex-row items-center justify-center" >
+          <div className="md:w-1/2 p-4">
+            <img
+              src="data:image/jpeg;base64,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" /* Replace with the actual path to your image */
+              alt="Your Image"
+              className="w-full h-auto"
+            />
+          </div>
+          <div className="md:w-1/2 text-center p-4">
+            <div className="section-header">
+              <h2 className="section-title text-white mb-4">Compare Card</h2>
+              <span className="section-divider bg-white mb-4 mx-auto"></span>
+              <p className="text-white">You can compare and pick most suitable credit card from card mantri. </p>
+             
+              <select className='align-middle m-5' >
+                <option>card1</option>
+                <option>card2</option>
+                <option>card3</option>
+                <option>card4</option>
+                <option>card5</option>
+              </select>
+              <span className='text-white font-extrabold '>V/S</span>
+              <select className='align-middle m-5' >
+                <option>card1</option>
+                <option>card2</option>
+                <option>card3</option>
+                <option>card4</option>
+                <option>card5</option>
+              </select>
+
+              <button className='bg-green-600 text-white'>Compare</button>
+            </div>
+          </div>
+        </div>
+    </div>
+
+  </section>
+</div> */}
+      
+
+
+
+
+
+      <div className='formCompare flex items-center justify-center'>
+                                        <div>
+                                            <h6>Card-1</h6>
+                                            <h6>Card-2</h6>
+                                        </div> 
+                                        <div>
+                                            <select>
+                                            <option>Card-1</option>
+                                            <option>Card-2</option>
+                                            <option>Card-3</option>
+                                            </select>
+                                            <select>
+                                            <option>Card-2</option>
+                                            <option>Card-1</option>
+                                            <option>Card-2</option>
+                                            <option>Card-3</option>
+                                            </select>
+                                        </div>
+                                        <div className="formComparebtn bg-green-500">
+                                            <button>Compare</button>
+                                        </div>
+                                        </div>
+                        
+              
+            </div>
+
+
+
+
+
+
+
+            import React from 'react';
+import { FaCheckCircle } from 'react-icons/fa';
+import '../assests/css/home.css'
+
+const CardComparison = () => {
+  return (
+    <>
+      <section id="about" className="section-bg">
+        <div className="container-fluid">
+          <div className="section-header">
+            <h3 className="section-title">COMPARE CARDS</h3>
+            <span className="section-divider"></span>
+            <p className="section-description">
+              We are one of the most popular and trustworthy credit card providers in the market
+              with a highly talented team.
+            </p>
+          </div>
+
+          <div className="flex flex-wrap">
+            <div className="w-full lg:w-6/12 about-img">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYBqCiv0IIKMqeQammp3dKuUDNtCPSqAxq1A&usqp=CAU" alt="About Us" />
+            </div>
+
+            <div className="w-full lg:w-6/12 content">
+              <ul className="icon-list text-white">
+                <li>
+                  <i><FaCheckCircle /></i> Compare and Choose the best credit card that suits you.
+                </li>
+                <li>
+                  <i><FaCheckCircle /></i> Online account management and Customizable credit limits.
+                </li>
+                <li>
+                  <i><FaCheckCircle /></i> Secure transactions with fraud protection and security measures.
+                </li>
+              </ul>
+            </div> 
+        <div className="mr-8">
+          <h6 className="mb-4 text-xl">Left Box</h6>
+          <select className="block w-full p-2 border border-gray-300 rounded-md">
+            <option>Option 1</option>
+            <option>Option 2</option>
+            <option>Option 3</option>
+          </select>
+        </div>
+        <div className="ml-8">
+          <h6 className="mb-4 text-xl">Right Box</h6>
+          <select className="block w-full p-2 border border-gray-300 rounded-md">
+            <option>Option A</option>
+            <option>Option B</option>
+            <option>Option C</option>
+          </select>
+        </div>
+      </div>
+      <button className="mt-8 px-6 py-3 bg-green-500 text-white rounded-full text-xl">Compare</button>
+    </div>          
+         
+        </section>
+    </>
+  );
+};
+
+export default CardComparison;
+
+
+
+
+.cardHead{
+  margin-left: 190px;
+  font-size: 30px;
+  
+}
+.cardSelect{
+  width: 200px;
+  margin-left: 90px;
+  border: 2px solid #ecac0b;
+  border-radius: 12px;
+}
+.cardButton{
+  margin-left: 270px;
+  width: 120px;
+  background-color: #008000;
+  border-radius: 20px;
+}

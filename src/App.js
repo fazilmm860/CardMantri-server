@@ -1,6 +1,7 @@
 
 import './App.css';
-import CompareCard from './components/CompareCard';
+import CardComparison from './components/CardComparison';
+
 
 import LandingPage from './pages/LandingPage';
 
@@ -15,7 +16,7 @@ function App() {
 
    {/* <LandingPage/> */}
 
-   <CompareCard/>
+<CardComparison/>
   
   </div>
 
