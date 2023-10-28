@@ -61,8 +61,7 @@ const CardComparison = () => {
             <h3 className="section-title">COMPARE CARDS</h3>
             <span className="section-divider"></span>
             <p className="section-description">
-              We are one of the most popular and trustworthy credit card providers in the market
-              with a highly talented team.
+            Unlocking the Best Credit Card: A Side-by-Side Comparison
             </p>
           </div>
 
@@ -74,13 +73,15 @@ const CardComparison = () => {
             <div className="w-full lg:w-5/12 content flex justify-between mt-12"> {/* Added flex and justify-between */}
               <ul className="icon-list text-white">
                 <li>
-                  <i><FaCheckCircle /></i> Compare and Choose the best credit card that suits you.
+                  <i><FaCheckCircle /></i> Cost Reduction: Compare to minimise fees and interest charges.
                 </li>
                 <li>
-                  <i><FaCheckCircle /></i> Online account management and Customizable credit limits.
+                  <i><FaCheckCircle /></i>  Find the card that offers the best rewards for your spending habits.
+
                 </li>
                 <li>
-                  <i><FaCheckCircle /></i> Secure transactions with fraud protection and security measures.
+                  <i><FaCheckCircle /></i>  Choose a card that aligns with your specific financial needs and goals.
+
                 </li>
                 <li>
                   <i></i> <h6 className='cardHead'>Card-1</h6> <h6 className='cardHead2'>Card-2</h6>
