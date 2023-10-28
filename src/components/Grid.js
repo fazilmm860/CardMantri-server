@@ -16,67 +16,69 @@ const Grid = () => {
     {
         image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLuzUQgYxTFkUp-8WpSvk6lgRtddRWybKoqw&usqp=CAU',
         title: 'Cashback Credit Card',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        description: 'Spend Wisely, Get Money Back.',
       },
       {
         image: 'data:image/jpeg;base64,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',
         title: 'Travel Credit Card',
-        description: 'Vestibulum volutpat mauris ac consequat congue.',
+        description: 'Your Ticket to Global Exploration: The Travel Credit Card Way.'
+        
       },
       {
         image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR06UIU9T19y4BP2s_vldY29g1IVvBcCayfbQ&usqp=CAU',
         title: 'Business Credit Card',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        description: 'The Credit Card for Entrepreneurs on the Rise.',
       },
       {
         image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSg9yfZCLIHZng6ebNJqKpeB4dEoTk14fnMPw&usqp=CAU',
         title: 'Co-Branded Credit Card',
-        description: 'Vestibulum volutpat mauris ac consequat congue.',
+        description: ' Experience the Best of Both Worlds with Co-Branded Credit.',
       },
       {
         image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToZpKNwthgBBxRPEhkd7QHR1qvk8qI-qrCXg&usqp=CAU',
         title: 'Secured Credit Card',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        description: 'Your Trusty Companion on the Path to Financial Freedom.'
+        
       },
       {
         image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFeL2hui_P29dRiBNN6mv_7k3ZSjlShsy8MA&usqp=CAU',
         title: 'Corporate Credit Card',
-        description: 'Vestibulum volutpat mauris ac consequat congue.',
+        description: 'Spend Smart, Grow Strong with Corporate Credit.',
       },
       {
         image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSL4PiMC6aBxFgCD7GovcHOv981S1UFLmgFTg&usqp=CAU',
         title: 'Student Credit Card',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        description: 'Student Credit: Your Bridge to Financial Well-being.',
       },
       {
         image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsr6g8wIiZoyTYT4TEAtPeL4N13RlZam3UEg&usqp=CAU',
         title: 'Premium/signature Credit Card',
-        description: 'Vestibulum volutpat mauris ac consequat congue.',
+        description: 'Unlock a World of Prestige and Privilege.',
       },
       {
         image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRV1mxBbINArGevZEvhfqIlsD3TeMYjWhlkEw&usqp=CAU',
         title: 'Entertainment Credit Card',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        description: 'Bringing Entertainment to Your Fingertips',
       },
       {
         image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRn_uwcDHGU3W3O6i-G0zvxPxkmy0y_STUuxQ&usqp=CAU',
         title: 'Credit Card For Women',
-        description: 'Vestibulum volutpat mauris ac consequat congue.',
+        description: 'Credit Designed with Women in Mind.',
       },
       {
         image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsr6g8wIiZoyTYT4TEAtPeL4N13RlZam3UEg&usqp=CAU',
         title: 'Classic Credit Card',
-        description: 'Vestibulum volutpat mauris ac consequat congue.',
+        description: 'The Classic Choice for Financial Freedom.',
       },
       {
         image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRV1mxBbINArGevZEvhfqIlsD3TeMYjWhlkEw&usqp=CAU',
         title: 'Titanium Credit Cards',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        description: 'Where Elegance Meets Financial Mastery.',
       },
       {
         image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRn_uwcDHGU3W3O6i-G0zvxPxkmy0y_STUuxQ&usqp=CAU',
         title: 'Platinum Credit Cards',
-        description: 'Vestibulum volutpat mauris ac consequat congue.',
+        description: 'Experience Luxury and Limitless Rewards.',
       },
   ];
  

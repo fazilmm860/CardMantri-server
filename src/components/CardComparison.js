@@ -5,7 +5,7 @@ import '../assests/css/home.css'
 const CardComparison = () => {
   const card=[
     {
-      select:'select'
+      select:'Select'
     },
     {
       select:'Reward Credit Card'
@@ -106,14 +106,9 @@ const CardComparison = () => {
                   <i></i> <button className='cardButton '>Compare</button> 
                 </li>
                 <li></li>
-             </ul>  
-            
-            
-                      
-            </div>
-                    
-             </div>
-             
+             </ul>                        
+            </div>                    
+             </div>      
         </div>
         </section>
     </>

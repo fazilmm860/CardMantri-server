@@ -1542,3 +1542,82 @@ section {
     margin-left: 5px; /* Reset margin */
   }
 }
+.banks{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Allow cards to wrap to the next line */
+  max-width: 800px; /* Adjust this value based on your desired width */
+  margin: 0 auto; /* Centers the container */
+  border: 2px solid white;
+
+}
+.bankBoxes {
+  width: 200px;
+  height: 50px;
+  margin: 25px;
+  border: 2px solid #f9a310;
+  box-sizing: border-box; /* Ensures that borders and padding are included in the width */
+}
+
+.bankImage{
+   margin: 5px;
+}
+
+#cardProvider {
+  padding: 2rem 0;
+  overflow: hidden;
+}
+
+.cardProvider-header .cardProvider-title {
+  font-size: 32px;
+  color: #fff;
+  text-align: center;
+  font-weight: 400;
+}
+
+.cardProvider-header .cardProvider-description {
+  text-align: center;
+  padding-bottom: 40px;
+  color: #fff;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.cardProvider-header .cardProvider-divider {
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #f9a310;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+/* Section with background --------------------------------*/
+.cardPovider-bg {
+  background: #000;
+}
+
+
+@media (max-width: 767px) {
+  .cardProvider-title {
+    font-size: 24px; /* Adjust font size for smaller screens */
+  }
+  
+  .cardProvider-description {
+    font-size: 16px; /* Adjust font size for smaller screens */
+  }
+  
+  .banks {
+    max-width: none; /* Allow full width on mobile */
+    padding: 10px 10px; /* Add some horizontal padding */
+    margin: 0; /* Reset margin for full width */
+  }
+  
+  .bankBoxes {
+    width: 100%; /* Make boxes full width on mobile */
+    margin: 2px ; /* Adjust margin as needed */
+  }
+  .bankBoxes {
+    width: calc(50% - 50px); /* Two bankBoxes in a row */
+  }
+}
