@@ -96,7 +96,7 @@ h6 {
   height: 92px;
   transition: all 0.5s;
   z-index: 997;
-  background: linear-gradient(45deg, rgb(4, 4, 4), #cd8c1d);
+  background: linear-gradient(45deg,  #1c1c1b);
 }
 
 #header.header-transparent {
@@ -876,7 +876,7 @@ section {
 --------------------------------*/
 #call-to-action {
   overflow: hidden;
-  background: linear-gradient(rgba(199, 132, 17, 0.65), rgba(11, 11, 11, 0.981)), url(../img/call-to-action-bg.jpg) fixed center center;
+  background: linear-gradient(rgba(16, 16, 15, 0.65), rgba(0, 0, 0, 0.981)), url(../img/Untitled\ design\ \(2\).png) fixed center center;
   background-size: cover;
   padding: 80px 0;
 }
@@ -1505,7 +1505,6 @@ section {
   margin: 10px auto; /* Center the element on smaller screens */
   border: 2px solid #f9a310;
   color: #000;
-  background-color: #9da1a1;
   border-radius: 10px;
 }
 
@@ -1546,21 +1545,30 @@ section {
   display: flex;
   justify-content: center;
   flex-wrap: wrap; /* Allow cards to wrap to the next line */
-  max-width: 800px; /* Adjust this value based on your desired width */
+  max-width: 1000px; /* Adjust this value based on your desired width */
   margin: 0 auto; /* Centers the container */
-  border: 2px solid white;
 
 }
 .bankBoxes {
-  width: 200px;
+  width: 180px;
   height: 50px;
   margin: 25px;
-  border: 2px solid #f9a310;
+
+  background-color: #f0f0f0;
+  border-radius: 5px;
   box-sizing: border-box; /* Ensures that borders and padding are included in the width */
+}
+.bankBoxes:hover{
+  background-color:#f0f0f0ad ;
 }
 
 .bankImage{
    margin: 5px;
+}
+.bankName{
+  color: #000;
+  font-size: 12px;
+
 }
 
 #cardProvider {
@@ -1620,4 +1628,18 @@ section {
   .bankBoxes {
     width: calc(50% - 50px); /* Two bankBoxes in a row */
   }
+}
+
+.compareCard{
+  color: #f9a310;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+.compareCard:hover,
+.compareCard:active,
+.compareCard:focus {
+  color: #0c0c0c;
+  outline: none;
+  text-decoration: none;
 }

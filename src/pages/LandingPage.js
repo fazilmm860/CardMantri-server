@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import '../assests/css/home.css'; // Make sure to adjust the path if necessary
@@ -9,18 +9,45 @@ import Grid from '../components/Grid';
 import HorizontalCard from '../components/HorizontalCard';
 import About from '../components/About';
 import CallToAction from '../components/CallToAction';
+import CardComparison from '../components/CardComparison';
+import CardProvider from '../components/CardProvider';
+import logo from '../assests/img/logo-name.png'
+import { Link } from 'react-router-dom';
 
 const LandingPage = () => {
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
   }, []);
+  const [scrolled, setScrolled] = useState(false);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+
+  const cardComparisonRef = useRef();
+
+  const handleCompareButtonClick = () => {
+    cardComparisonRef.current.scrollIntoView({ behavior: 'smooth' });
+  };
   return (
-    <div>
-    <header id="header" className="fixed top-0 w-full bg-transparent p-4 text-white">
+    <>
+    <header id="header" className={`fixed top-0 w-full  p-4 text-white ${scrolled ? 'bg-black' : ''}`}>
       <div className="container mx-auto flex justify-between items-center">
         <div id="logo" >
-          <h1 ><a href="index.html">Card Mantri</a></h1>
+          <h1 ><a href="index.html"><img src={logo} style={{width:'220px', marginLeft:'50px' }}></img></a></h1>
         </div>
         <nav  id="navbar" className="navbar">
           <ul className="flex space-x-4">
@@ -30,8 +57,8 @@ const LandingPage = () => {
                 <span>Banks</span> <i className="bi bi-chevron-down"></i>
               </a>
               <ul >
-                <li><a href="/assets/Cards/CashBackCard.html">HDFC</a></li>
-                <li><a href="/assets/Cards/CashBackCard.html">IDFC FIRST BANK</a></li>
+                <li><a href="/">HDFC</a></li>
+                <li><a href="/">IDFC FIRST BANK</a></li>
                 {/* Add other bank items */}
               </ul>
             </li>
@@ -40,13 +67,13 @@ const LandingPage = () => {
                 <span>Cards</span> <i className="bi bi-chevron-down"></i>
               </a>
               <ul className="hidden">
-                <li><a href="/assets/Cards/CashBackCard.html">Premium Credit Cards</a></li>
-                <li><a href="/assets/Cards/CashBackCard.html">Cashback Credit Cards</a></li>
+                <li><a href="/">Premium Credit Cards</a></li>
+                <li><a href="/">Cashback Credit Cards</a></li>
                 {/* Add other card items */}
               </ul>
             </li>
-            <li><a className="nav-link scrollto" href="/assets/Cards/CashBackCard.html">MemberShip</a></li>
-            <li><a className="nav-link scrollto" href="/assets/Cards/CashBackCard.html">Team</a></li>
+            <li><a className="nav-link scrollto" href="/">MemberShip</a></li>
+            <li><a className="nav-link scrollto" href="/">Team</a></li>
             <li><a className="nav-link scrollto" href="#contact">Contact</a></li>
           </ul>
           <i className="bi bi-list mobile-nav-toggle"></i>
@@ -58,7 +85,7 @@ const LandingPage = () => {
       <div className="hero-text" data-aos="zoom-out">
       <h2>Explore Card Mantri</h2>
       <p>We are team of talented Credit card advisors in the market</p>
-      <a href="#about" className="btn-get-started scrollto">Compare cards</a>
+    <button  className=" btn-get-started scrollto"onClick={handleCompareButtonClick}>Compare cards</button>
     </div>
     <div className="product-screens">
       <div className="product-screen-1" data-aos="fade-up" data-aos-delay="400">
@@ -83,7 +110,8 @@ const LandingPage = () => {
 
        <HorizontalCard/>
        
-     
+     <CardComparison ref={cardComparisonRef}/>
+     <CardProvider/>
 
 
 
@@ -167,7 +195,7 @@ const LandingPage = () => {
       <div className="flex flex-col lg:flex-row justify-between items-center">
         <div className="text-lg-start text-center mb-4 lg:mb-0">
           <div className="copyright">
-            &copy; Copyright <strong>Fzcreations</strong>. All Rights Reserved
+            Copyright &copy; <strong>Fzcreations</strong>. All Rights Reserved
           </div>
           <div className="credits">
             Designed by <a href="#">Fzcreations</a>
@@ -190,7 +218,7 @@ const LandingPage = () => {
       <i className="bi bi-whatsapp"></i>
     </a>
     
-    </div>
+    </>
   );
 }
 

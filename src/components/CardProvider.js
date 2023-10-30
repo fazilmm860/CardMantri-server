@@ -26,6 +26,30 @@ const CardProvider = () => {
             image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRku2QWJs3eIScQb0Rb1KCG1xU88EBT0XD_zg&usqp=CAU',
             name:'HDFC BANK',
         },
+        {
+            image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRku2QWJs3eIScQb0Rb1KCG1xU88EBT0XD_zg&usqp=CAU',
+            name:'HDFC BANK',
+        },
+        {
+            image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRku2QWJs3eIScQb0Rb1KCG1xU88EBT0XD_zg&usqp=CAU',
+            name:'HDFC BANK',
+        },  
+        {
+            image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRku2QWJs3eIScQb0Rb1KCG1xU88EBT0XD_zg&usqp=CAU',
+            name:'HDFC BANK',
+        },
+        {
+            image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRku2QWJs3eIScQb0Rb1KCG1xU88EBT0XD_zg&usqp=CAU',
+            name:'HDFC BANK',
+        },
+        {
+            image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRku2QWJs3eIScQb0Rb1KCG1xU88EBT0XD_zg&usqp=CAU',
+            name:'HDFC BANK',
+        },
+        {
+            image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRku2QWJs3eIScQb0Rb1KCG1xU88EBT0XD_zg&usqp=CAU',
+            name:'HDFC BANK',
+        },  
   
     ]
   return (
@@ -52,7 +76,7 @@ const CardProvider = () => {
                              className='bankImage w-8 h-8' />
                     </div>
                     <div className='ml-4 mt-5'>
-                     <h6 className='text-white'>{item.name}</h6>
+                     <h6 className='bankName'>{item.name}</h6>
                     </div>
                    
                 </div>

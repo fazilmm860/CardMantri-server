@@ -2,7 +2,7 @@ import React from 'react';
 import { FaCheckCircle, FaChevronLeft } from 'react-icons/fa';
 import '../assests/css/home.css'
 
-const CardComparison = () => {
+const CardComparison = React.forwardRef((props,ref) => {
   const card=[
     {
       select:'Select'
@@ -55,7 +55,8 @@ const CardComparison = () => {
   ]
   return (
     <>
-      <section id="about" className="section-bg">
+    <div ref={ref}>
+    <section id="about" className="section-bg">
         <div className="container-fluid">
           <div className="section-header">
             <h3 className="section-title">COMPARE CARDS</h3>
@@ -87,7 +88,7 @@ const CardComparison = () => {
                   <i></i> <h6 className='cardHead'>Card-1</h6> <h6 className='cardHead2'>Card-2</h6>
                 </li>
                 <li>
-                  <i></i><select className='cardSelect '>
+                  <i></i><select className='cardSelect bg-slate-300 '>
                       {card.map((item)=>(
                       <option>{item.select}</option>
                       ))}
@@ -96,7 +97,7 @@ const CardComparison = () => {
                                                 className='cardImage'
                                            ></img>
 
-                     <select className='cardSelect'>
+                     <select className='cardSelect  bg-slate-300'>
                      {card.map((item)=>(
                       <option>{item.select}</option>
                       ))}
@@ -111,8 +112,10 @@ const CardComparison = () => {
              </div>      
         </div>
         </section>
+    </div>
+     
     </>
   );
-};
+});
 
 export default CardComparison;
