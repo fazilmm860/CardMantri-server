@@ -39,7 +39,7 @@ const About = () => {
         <Typography variant="h6" color="#f9a310"  className="mb-4 uppercase text-orange-400">
          Card Mantri
         </Typography>
-        <Typography variant="h4" color="blue-gray" className="mb-2">
+        <Typography variant="h4" color="blue-gray" className="mb-2 uppercase">
          Unlocking the right card for you...
         </Typography>
         <Typography color="gray" className="mb-8 font-normal">

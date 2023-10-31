@@ -1,23 +1,49 @@
 import React, { useState } from 'react';
 import '../assests/css/contact.css'
-const ContactForm = ({ isOpen, closeModal }) => {
-  const [formData, setFormData] = useState({
-    name: '',
-    number:'',
-    email: '',
-    message: '',
-  });
+import emailjs from '@emailjs/browser';
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
+const ContactForm = ({ isOpen, closeModal }) => {
+
+const[name,setName]=useState('');
+const[number,setNumber]=useState('');
+const[email,setEmail]=useState('');
+const[message,setMessage]=useState('');
+
+ 
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-    // You can add your form submission logic here
+  
+    //Your EmailJS service ID, template ID, and Public Key
+      const serviceId='service_koc5xc4';
+      const templateid='template_sys414l';
+      const publicKey = 'h9DlfGnTxRz-Me12f';
+
+      //Create a new object that contains dynamic template params
+
+        const templateParams={
+          from_name:name,
+          from_number:number,
+          from_email:email,
+          to_name:"Card Mantri",
+          message: message,
+
+
+        };
+
+        //send the email using Email js
+        emailjs.send(serviceId,templateid,templateParams,publicKey)
+        .then((response)=>{
+          console.log(`Email sent successfully:`, response);
+          setName('');
+          setNumber('');
+          setEmail('');
+          setMessage('');
+        })
+        .catch((error)=>{
+          console.error('Error sending email:', error);
+        })
+
   };
   const handleBackgroundClick = (e) => {
     if (e.target.classList.contains('modal')) {
@@ -34,8 +60,8 @@ const ContactForm = ({ isOpen, closeModal }) => {
             <input
               type="text"
               name="name"
-              value={formData.name}
-              onChange={handleChange}
+              value={name}
+              onChange={(e)=> setName(e.target.value)}
               className=""
               required
             />
@@ -45,8 +71,8 @@ const ContactForm = ({ isOpen, closeModal }) => {
             <input
               type="text"
               name="number"
-              value={formData.email}
-              onChange={handleChange}
+              value={number}
+              onChange={(e)=> setNumber(e.target.value)}
               className=""
               required
             />
@@ -56,8 +82,8 @@ const ContactForm = ({ isOpen, closeModal }) => {
             <input
               type="email"
               name="email"
-              value={formData.email}
-              onChange={handleChange}
+              value={email}
+              onChange={(e)=> setEmail(e.target.value)}
               className=""
               required
             />
@@ -66,8 +92,8 @@ const ContactForm = ({ isOpen, closeModal }) => {
             <span className="">Message</span>
             <textarea
               name="message"
-              value={formData.message}
-              onChange={handleChange}
+              value={message}
+              onChange={(e)=> setMessage(e.target.value)}
               className=" "
               required
             />
