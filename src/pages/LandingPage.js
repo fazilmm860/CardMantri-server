@@ -13,6 +13,7 @@ import CardComparison from '../components/CardComparison';
 import CardProvider from '../components/CardProvider';
 import logo from '../assests/img/logo-name.png'
 import { Link } from 'react-router-dom';
+import Navbar from '../components/Navbar';
 
 const LandingPage = () => {
   useEffect(() => {
@@ -44,43 +45,8 @@ const LandingPage = () => {
   };
   return (
     <>
-    <header id="header" className={`fixed top-0 w-full  p-4 text-white ${scrolled ? 'bg-black' : ''}`}>
-      <div className="container mx-auto flex justify-between items-center">
-        <div id="logo" >
-          <h1 ><a href="index.html"><img src={logo} style={{width:'220px', marginLeft:'50px' }}></img></a></h1>
-        </div>
-        <nav  id="navbar" className="navbar">
-          <ul className="flex space-x-4">
-            <li><a className="nav-link scrollto active" href="#hero">Home</a></li>
-            <li className="dropdown scrollable-menu">
-              <a href="#" >
-                <span>Banks</span> <i className="bi bi-chevron-down"></i>
-              </a>
-              <ul >
-                <li><a href="/">HDFC</a></li>
-                <li><a href="/">IDFC FIRST BANK</a></li>
-                {/* Add other bank items */}
-              </ul>
-            </li>
-            <li className="dropdown">
-              <a href="#" >
-                <span>Cards</span> <i className="bi bi-chevron-down"></i>
-              </a>
-              <ul className="hidden">
-                <li><a href="/">Premium Credit Cards</a></li>
-                <li><a href="/">Cashback Credit Cards</a></li>
-                {/* Add other card items */}
-              </ul>
-            </li>
-            <li><a className="nav-link scrollto" href="/">MemberShip</a></li>
-            <li><a className="nav-link scrollto" href="/">Team</a></li>
-            <li><a className="nav-link scrollto" href="#contact">Contact</a></li>
-          </ul>
-          <i className="bi bi-list mobile-nav-toggle"></i>
-        </nav>
-      </div>
-    </header>
-
+    
+<Navbar/>
       <section id="hero">
       <div className="hero-text" data-aos="zoom-out">
       <h2>Explore Card Mantri</h2>
