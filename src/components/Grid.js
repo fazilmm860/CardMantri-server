@@ -100,11 +100,11 @@ const Grid = () => {
   return (
 <div className="p-8 flex justify-center items-center bg-black bg-opacity-100 ">
        <button onClick={handlePrev}  className="p-2  fon"   ><FaChevronLeft/></button>
-      <div ref={gridRef} className=" flex overflow-x-hidden  space-x-4">
+      <div ref={gridRef} className=" flex overflow-x-hidden  space-x-2 ">
         {gridData.map((item, index) => (
           <div
             key={index}
-            className={`flex-shrink-0 w-64 bg-gray-200 border  p-6 hover:scale-105 transition-transform duration-300  rounded-[25px]`}
+            className={`gridcard flex-shrink-0 w-64   bg-gray-200 border  p-6 hover:scale-105 transition-transform duration-300  rounded-[25px]`}
           >
            <img src={item.image} alt={`Block ${index + 1}`} className="w-full h-32 object-cover mb-2  rounded-[25px]" />
             <h3 className="text-lg font-bold mb-2">{item.title}</h3>

@@ -1,22 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,200;1,300;1,400;1,500;1,600&display=swap');
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Nunito', sans-serif;
 
-}
 
 
 .box{
-position: fixed;
-top: 50%;
+position:absolute;
+top: 60%;
 left: 50%;
 transform: translate(-50%, -50%);
 width: 470px;
 height: 370px;
-background: #1c1c1c;
+background-color: rgb(7, 7, 7);
+
 border-radius: 50px 50px;
 overflow: hidden;
 
@@ -32,7 +27,7 @@ overflow: hidden;
     height: 450px;
     background: linear-gradient(60deg,transparent,#f9a310,#45f3ff);
     transform-origin:bottom right;
-    animation: animate 6s linear infinite;
+    animation: animate 8s linear infinite;
    
 
 }
@@ -60,12 +55,13 @@ overflow: hidden;
     }
 }
 
-form
+.fomHead
 {
    position: absolute;
    inset: 2px;
    border-radius: 50px 50px;
-   background: #28292d;
+   background-image: url(../img/Contact-Page-bg.png);
+ 
    z-index: 10;
    padding: 30px 30px;
    display: flex;
@@ -73,7 +69,7 @@ form
 
 }
 
-h2
+.formH2
 {
     color:#45f3ff;
     font-size: 35px;
@@ -91,8 +87,8 @@ position: relative;
   margin: 0 auto;
 }
 
-.inputBox input,
-.inputBox textarea
+.inputBox .inputIcon
+
 {
     position: relative;
     width: 100%;
@@ -109,7 +105,7 @@ position: relative;
 
 
 
-input[type="submit"]
+.inputIcon[type="submit"]
 {
     font-size: 20px;
     border: none;
@@ -123,28 +119,32 @@ input[type="submit"]
     cursor: pointer;
 }
 
-input[type="submit"]:active
+.inputIcon[type="submit"]:active
 {
     background: linear-gradient(90deg, #45f3ff, #d9138a);
     opacity: 0.8;
 
 }
  
-.inputBox span
+.inputSpan
 {
     position: absolute;
     left: 0;
     padding: 20px  10px 10px;
     font-size: 1em;
-    color: #8f8f8f;
+    color: #d8d2d228;
     pointer-events: none;
     letter-spacing: 0.05em;
     transition: 0.5s;
 
 }
+.formBtn{
+    margin: 10px;
+   border:2px solid white;
+}
 
-.inputBox input:valid ~ span,
-.inputBox input:focus ~ span
+.inputSpan input:valid label,
+.inputSpan input:focus label
 {
     color: #45f3ff;
     transform: translateX(-10px) translateY(-30px);
@@ -177,3 +177,5 @@ input[type="submit"]:active
         width: 100%; /* Make the input box full width */
     }
 }
+
+

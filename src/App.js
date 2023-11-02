@@ -6,6 +6,9 @@ import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 
 import LandingPage from './pages/LandingPage';
 import Navbar from './components/Navbar';
+import ContactForm from './components/ContactForm';
+import CallToAction from './components/CallToAction';
+import ContactPage from './components/ContactPage';
 
 
 
@@ -20,6 +23,7 @@ function App() {
       <Route exact path='/' element={<LandingPage/>}/>
       <Route exact path='/compare-card' element={<CardComparison/>}/>
       <Route exact path='/nav' element={<Navbar/>}/>
+      <Route exact path='/contact' element={<ContactPage/>}/>
     </Routes>
    </Router>
 

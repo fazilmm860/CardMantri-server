@@ -212,7 +212,8 @@ h6 {
 }
 
 .navbar .dropdown ul {
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
   position: absolute;
   left: 24px;
   top: calc(100% + 30px);
@@ -228,10 +229,15 @@ h6 {
 
 .navbar .dropdown ul li {
   min-width: 200px;
+  width: 33.33%; /* Set each item to take up one-third of the container width */
+  box-sizing: border-box; /* Include padding and border in the width */
+  padding: 10px 20px;
+  text-align: center;
 }
 
 
 .navbar .dropdown ul a {
+  display: block;
   padding: 10px 20px;
   font-size: 12px;
   text-transform: none;
@@ -907,14 +913,14 @@ section {
   display: inline-block;
   padding: 8px 30px;
   border-radius: 25px;
-  transition: background 0.5s;
+  transition: background 0.4s;
   margin: 10px;
   border: 2px solid #fff;
   color: #fff;
 }
 
 #call-to-action .cta-btn:hover {
-  background:linear-gradient(#f9a310,#000 ) ;
+  background:linear-gradient(#f9a31032,#000 ) ;
   border: 2px solid #000;
 }
 
@@ -1472,22 +1478,25 @@ section {
 
 .fon{
 
-  width:100px;
-  height: 100px;
-  background-color: white;
-  opacity:0.4;
+  
+  opacity:0.3;
   border-radius: 50%;
-  font-size: xx-large;
-  color: black;
+  font-size: 50px;
+  color: rgba(255, 254, 254, 0.726);
+}
+.fon:hover{
+  color: #f9a310;
+  transform: scale3d(0.5, 0.5, 1);
+  transform-origin: center;
 }
 
 @media screen and (max-width: 600px) {
   .fon {
-    width: 80px;
-    height: 80px;
-    font-size: large;
+
+    font-size: 50px;
   }
 }
+  
 
 .cardHead {
   margin-left: 80px;

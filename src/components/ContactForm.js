@@ -53,48 +53,48 @@ const[message,setMessage]=useState('');
   return (
     <div className={`modal ${isOpen ? 'block' : 'hidden'} box fixed inset-0 mt-12 bg-gray-900 bg-opacity-50 z-50 flex items-center justify-center`} onClick={handleBackgroundClick}>
       <div className="modal-content bg-white p-8 rounded shadow-lg">
-        <h2 className="">Contact Us</h2>
-        <form onSubmit={handleSubmit}>
+        <h2 className="formH2">Contact Us</h2>
+        <form className="fomHead" onSubmit={handleSubmit}>
           <div className="mb-4 inputBox">
-            <span>Name</span>
+            <label className='inputSpan'>Name</label>
             <input
               type="text"
               name="name"
               value={name}
               onChange={(e)=> setName(e.target.value)}
-              className=""
+              className="inputIcon"
               required
             />
           </div>
           <div className="mb-4 inputBox">
-            <span className="">Mob-Number</span>
-            <input
+            <label className='inputSpan'>Mob-Number</label>
+            <input 
               type="text"
               name="number"
               value={number}
               onChange={(e)=> setNumber(e.target.value)}
-              className=""
+              className="inputIcon"
               required
             />
           </div>
           <div className="mb-4 inputBox">
-            <span className="">Email</span>
+            <label className='inputSpan'>Email</label>
             <input
               type="email"
               name="email"
               value={email}
               onChange={(e)=> setEmail(e.target.value)}
-              className=""
+              className="inputIcon"
               required
             />
           </div>
           <div className="mb-6 inputBox">
-            <span className="">Message</span>
+            <label className='inputSpan'>Message</label>
             <textarea
               name="message"
               value={message}
               onChange={(e)=> setMessage(e.target.value)}
-              className=" "
+              className="inputIcon "
               required
             />
           </div>
@@ -102,13 +102,13 @@ const[message,setMessage]=useState('');
             <button
               type="button"
               onClick={closeModal}
-              className="bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded mr-2"
+              className=" formBtn text-white font-bold py-2 px-4 rounded m-5"
             >
               Close
             </button>
             <button
               type="submit"
-              className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
+              className="formBtn text-white font-bold py-2 px-4 rounded"
             >
               Submit
             </button>

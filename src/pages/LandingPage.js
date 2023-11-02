@@ -21,22 +21,7 @@ const LandingPage = () => {
   }, []);
   const [scrolled, setScrolled] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 0) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
+ 
 
   const cardComparisonRef = useRef();
 
@@ -46,7 +31,7 @@ const LandingPage = () => {
   return (
     <>
     
-<Navbar/>
+      <Navbar/>
       <section id="hero">
       <div className="hero-text" data-aos="zoom-out">
       <h2>Explore Card Mantri</h2>

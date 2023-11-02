@@ -1,8 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
+import ContactForm from './ContactForm';
 
  
  const HorizontalCard = () => {
-  
+  const[isModalOpen, setIsModalOpen]=useState(false)
+
+  const openModal=()=>{
+    setIsModalOpen(true);
+  };
+  const closeModal=()=>{
+    setIsModalOpen(false);
+  };
   const card=[
    
     {
@@ -110,7 +118,7 @@ import React from 'react'
               </a>
               <a className="inline-block" href="#">
                 <button
-                  className="flex items-center gap-2 px-6 py-3 font-sans text-xs font-bold text-center uppercase align-middle transition-all rounded-lg select-none disabled:pointer-events-none disabled:opacity-50 text-white disabled:shadow-none bg-green-600"                  
+                        onClick={openModal} className="flex items-center gap-2 px-6 py-3 font-sans text-xs font-bold text-center uppercase align-middle transition-all rounded-lg select-none disabled:pointer-events-none disabled:opacity-50 text-white disabled:shadow-none bg-green-600"                  
                   type="button"                 
                 >
                 Apply 
@@ -131,7 +139,7 @@ import React from 'react'
               </div>
               </div>
               ))}
-
+                <ContactForm isOpen={isModalOpen} closeModal={closeModal} />
               </div>
     </>
 
