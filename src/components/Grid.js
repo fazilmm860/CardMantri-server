@@ -99,8 +99,9 @@ const Grid = () => {
  
   return (
 <div className="p-8 flex justify-center items-center bg-black bg-opacity-100 ">
-       <button onClick={handlePrev}  className="p-2  fon"   ><FaChevronLeft/></button>
+      <button onClick={handlePrev}  className="p-2  fon"   ><FaChevronLeft/></button> 
       <div ref={gridRef} className=" flex overflow-x-hidden  space-x-2 ">
+     
         {gridData.map((item, index) => (
           <div
             key={index}

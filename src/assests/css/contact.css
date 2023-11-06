@@ -178,4 +178,22 @@ position: relative;
     }
 }
 
+.landingFrom{
+    display:inline-block;
+    margin-left: 150px;
+    width: 650px;   
+}
+
+.landingPage{
+    background-image: url('../img/background-mainpage-singh.png');
+    background-size: cover;
+    position: relative;
+}
+
+.landingpagebtn{
+    margin-top: 20px;
+    padding: 8px;
+    text-align: center;
+    border: 2px solid white;
+}
 

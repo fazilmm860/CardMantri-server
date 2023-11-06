@@ -1412,30 +1412,30 @@ section {
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
-#footer {
-  background: #fff;
+.footer {
+  background: #070707;
   box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
   padding: 30px 0;
-  color: #333;
+  color: #fbfbfb;
   font-size: 14px;
 }
 
-#footer .credits {
+.footer .credits {
   font-size: 13px;
-  color: #888;
+  color: #f9f3f3;
 }
 
-#footer .footer-links a {
-  color: #666;
+.footer .footer-links a {
+  color: #efe4e4;
   padding-left: 15px;
 }
 
-#footer .footer-links a:first-child {
+.footer .footer-links a:first-child {
   padding-left: 0;
 }
 
-#footer .footer-links a:hover {
-  color: #f9a310;
+.footer .footer-links a:hover {
+  color: #e0981b;
 }
 
 .cardbtn{
@@ -1479,10 +1479,10 @@ section {
 .fon{
 
   
-  opacity:0.3;
+  opacity:0.;
   border-radius: 50%;
   font-size: 50px;
-  color: rgba(255, 254, 254, 0.726);
+  color: rgba(242, 232, 232, 0.726);
 }
 .fon:hover{
   color: #f9a310;
