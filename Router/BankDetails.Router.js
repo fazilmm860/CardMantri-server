@@ -3,9 +3,9 @@ const { dataPost, dataGet, specficDataGet } = require('../controllers/BankDetail
 
 const router=express.Router()
 
-router.post('/post',dataPost);
-router.get('/getData',dataGet);
-router.get('/getSpecificData/:bankName',specficDataGet)
+router.post('/postbank',dataPost);
+router.get('/getbank',dataGet);
+router.get('/getSpecificbank/:bankName',specficDataGet)
 
 
 module.exports=router;

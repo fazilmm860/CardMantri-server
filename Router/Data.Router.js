@@ -1,5 +1,5 @@
 const express=require('express');
-const { dataPost, dataGet, specficDataGet } = require('../contollers/Data');
+const { dataPost, dataGet, specficDataGet } = require('../controllers/Data');
 
 const router=express.Router()
 
