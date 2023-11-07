@@ -30,7 +30,7 @@ const corsOptions={
 
  app.use('/api',dataRouter);
  app.use('/api/bank', bankRouter);
-app.use('/api',creditCardRouter);
+app.use('/api/creditcard',creditCardRouter);
 
 
  app.listen(port,()=>{    
