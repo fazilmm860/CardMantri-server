@@ -10,13 +10,85 @@ const bankDetails=mongoose.Schema({
         type:String,
     },
     features:{
-        type:String,
+        point1:{
+            type:String,
+        },
+        point2:{
+            type:String,
+        },
+        point3:{
+            type:String,
+        },
+        point4:{
+            type:String,
+        },
+        point5:{
+            type:String,
+        },
+        point6:{
+            type:String,
+        },
+        point7:{
+            type:String,
+        },
+        point8:{
+            type:String,
+        },
+        point9:{
+            type:String,
+        },
+        point10:{
+            type:String,
+        },
     },
     cards:{
-        type:String,
+        card1:{
+            type:String,
+        },
+        card2:{
+            type:String,
+        },
+        card3:{
+            type:String,
+        },
+        card4:{
+            type:String,
+        },
+        card5:{
+            type:String,
+        },
     },
     benfits:{
-        type:String,
+        point1:{
+            type:String,
+        },
+        point2:{
+            type:String,
+        },
+        point3:{
+            type:String,
+        },
+        point4:{
+            type:String,
+        },
+        point5:{
+            type:String,
+        },
+        point6:{
+            type:String,
+        },
+        point7:{
+            type:String,
+        },
+        point8:{
+            type:String,
+        },
+        point9:{
+            type:String,
+        },
+        point10:{
+            type:String,
+        },
     },
 })
 const BankDetails=mongoose.model('bankDetails',bankDetails);
