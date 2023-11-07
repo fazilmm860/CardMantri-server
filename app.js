@@ -4,6 +4,7 @@ const dotenv=require('dotenv')
 const connection=require('./DB/Db.config')
 const bodyParser=require('body-parser')
 const dataRouter=require('./Router/Data.Router')
+const bankRouter=require('./Router/BankDetails.Router')
 
 dotenv.config()
 
@@ -26,6 +27,7 @@ const corsOptions={
 
 
  app.use('/api',dataRouter);
+ app.use('/api', bankRouter)
 
  app.listen(port,()=>{    
     console.log('Server started Successfully:', port);
