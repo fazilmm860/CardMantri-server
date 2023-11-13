@@ -40,11 +40,11 @@ const Navbar = () => {
               <a href="#" >
                 <span>Banks</span> <i><FaChevronDown/></i>
               </a>
-              <ul className="dropdown-menu absolute hidden  bg-white text-gray-700">
-                <li className="inline-block "><a href="/">HDFC</a></li>
-                <li className="inline-block "><a href="/">IDFC FIRST BANK</a></li>
-                <li className="inline-block "><a href="/">HDFC</a></li>
-                <li className="inline-block "><a href="/">IDFC FIRST BANK</a></li>
+              <ul className="dropdown-menu absolute hidden  text-gray-700">
+                <li className="inline-block ">HDFC</li>
+                <li className="inline-block ">IDFC FIRST BANK</li>
+                <li className="inline-block ">HDFC</li>
+                <li className="inline-block ">IDFC FIRST BANK</li>
                 {/* Add other bank items */}
               </ul>
             </li>

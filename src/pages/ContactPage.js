@@ -7,6 +7,7 @@ import 'aos/dist/aos.css';
 import ReCAPTCHA from 'react-google-recaptcha'
 import About from '../components/About';
 import TestiMonials from '../components/TestiMonials/TestiMonial';
+import Footer from '../components/Footer/Footer';
 
 
 
@@ -114,6 +115,7 @@ import TestiMonials from '../components/TestiMonials/TestiMonial';
         </div>
      <About/>
     <TestiMonials/>
+    <Footer/>
     </>
     
   )
