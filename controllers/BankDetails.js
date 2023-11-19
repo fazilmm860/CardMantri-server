@@ -38,7 +38,20 @@ const dataPost= async(req,res)=>{
                 point9: req.body.benfits.point9,
                 point10: req.body.benfits.point10,
             },
-
+            faq: {
+                point1: req.body.faq.point1,
+                point2: req.body.faq.point2,
+                point3: req.body.faq.point3,
+                point4: req.body.faq.point4,
+                point5: req.body.faq.point5,
+            },
+            faqAns: {
+                point1: req.body.faqAns.point1,
+                point2: req.body.faqAns.point2,
+                point3: req.body.faqAns.point3,
+                point4: req.body.faqAns.point4,
+                point5: req.body.faqAns.point5,
+            },
         })
         await newBankDetails.save()
         res.status(200).json({message:'Bank Data saved successfully'})

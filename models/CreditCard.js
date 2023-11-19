@@ -42,7 +42,7 @@ const cardDetails=mongoose.Schema({
         },
     },
   
-    benfits:{
+   eligibility:{
         point1:{
             type:String,
         },
@@ -71,6 +71,57 @@ const cardDetails=mongoose.Schema({
             type:String,
         },
         point10:{
+            type:String,
+        },
+    },
+    document:{
+        point1:{
+            type:String,
+        },
+        point2:{
+            type:String,
+        },
+        point3:{
+            type:String,
+        },
+        point4:{
+            type:String,
+        },
+        point5:{
+            type:String,
+        },
+    },
+    faq:{
+        point1:{
+            type:String,
+        },
+        point2:{
+            type:String,
+        },
+        point3:{
+            type:String,
+        },
+        point4:{
+            type:String,
+        },
+        point5:{
+            type:String,
+        },
+    },
+    faqAns:{
+        point1:{
+            type:String,
+        },
+        point2:{
+            type:String,
+        },
+        point3:{
+            type:String,
+        },
+        point4:{
+            type:String,
+        },
+        point5:{
             type:String,
         },
     },

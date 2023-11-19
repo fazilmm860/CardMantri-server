@@ -90,6 +90,40 @@ const bankDetails=mongoose.Schema({
             type:String,
         },
     },
+    faq:{
+        point1:{
+            type:String,
+        },
+        point2:{
+            type:String,
+        },
+        point3:{
+            type:String,
+        },
+        point4:{
+            type:String,
+        },
+        point5:{
+            type:String,
+        },
+    },
+    faqAns:{
+        point1:{
+            type:String,
+        },
+        point2:{
+            type:String,
+        },
+        point3:{
+            type:String,
+        },
+        point4:{
+            type:String,
+        },
+        point5:{
+            type:String,
+        },
+    },
 })
 const BankDetails=mongoose.model('bankDetails',bankDetails);
 module.exports=BankDetails;
