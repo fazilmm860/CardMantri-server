@@ -1,9 +1,68 @@
 import React, { useEffect, useState } from 'react'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import logo from '../assests/img/logo-name.png'
+import logo from '../assests/img/title.png'
 import '../assests/css/home.css';
 import { FaChevronDown, FaToggleOn } from 'react-icons/fa';
+
+const dropdown=[
+  {
+    title:'HDFC Bank',
+    to:'www.hdfc.com'
+  },
+  {
+    title:"IDFC Bank",
+    to:'www.idfc.com'
+  },
+  {
+    title:"ICICI Bank",
+    to:'www.icici.com'
+  },
+  {
+    title:"AXIS Bank",
+    to:'www.axis.com'
+  },
+  {
+    title:'SBI Bank',
+    to:'www.sbi.com'
+  },
+  {
+    title:'Indusand Bank',
+    to:'www.indusand.com'
+  },
+  {
+    title:'AU Credit Bank',
+    to:'www.Au.com',
+  },
+  {
+    title:'American Express',
+    to:'www.americanexpress.com',
+  },
+  {
+    title:'City Bank',
+    to:'www.cityBank.com',
+  },
+  {
+    title:'STANDARD CHARTERED Bank',
+    to:'www.standardcharteredbank.com',
+  },
+  {
+    title:'RBL Bank',
+    to:'www.rblbank.com',
+  },
+  {
+    title:'KOTAK Bank',
+    to:'www.kotakbank.com',
+  },
+  {
+    title:'BANK OF BARODA',
+    to:'www.bankofbaroda.com',
+  },
+  {
+    title:'PUNJAB NATIONAL BANK',
+    to:'www.punjabnational.com'
+  }
+]
 
 const Navbar = () => {
     useEffect(() => {
@@ -40,12 +99,10 @@ const Navbar = () => {
               <a href="#" >
                 <span>Banks</span> <i><FaChevronDown/></i>
               </a>
-              <ul className="dropdown-menu absolute hidden  text-gray-700">
-                <li className="inline-block ">HDFC</li>
-                <li className="inline-block ">IDFC FIRST BANK</li>
-                <li className="inline-block ">HDFC</li>
-                <li className="inline-block ">IDFC FIRST BANK</li>
-                {/* Add other bank items */}
+              <ul className="hidden">
+                <li><a href="/">Premium Credit Cards</a></li>
+                <li><a href="/">Cashback Credit Cards</a></li>
+                {/* Add other card items */}
               </ul>
             </li>
             <li className="dropdown">

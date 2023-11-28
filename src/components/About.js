@@ -36,7 +36,7 @@ const About = () => {
         />
       </CardHeader>
       <CardBody>
-        <Typography variant="h6" color="#f9a310"  className="mb-4 uppercase text-orange-400">
+        <Typography variant="h6" color="#7ed957"  className="mb-4 uppercase text-green-500">
          Card Mantri
         </Typography>
         <Typography variant="h4" color="blue-gray" className="mb-2 uppercase">
@@ -49,7 +49,7 @@ const About = () => {
          and make your financial life easier and more rewarding..Card Mantri offers types of credit cards.
         </Typography>
         <a href="#" className="inline-block">
-          <Button variant="text" className="flex items-center gap-2 text-orange-400 hover:bg-gray-800
+          <Button variant="text" className="flex items-center gap-2  text-green-500 hover:bg-gray-800
           ">
             Learn More
             <svg

@@ -11,7 +11,7 @@ import About from '../components/About';
 import CallToAction from '../components/CallToAction';
 import CardComparison from '../components/CardComparison';
 import CardProvider from '../components/CardProvider';
-import logo from '../assests/img/logo-name.png'
+import logo from '../assests/img/title.png'
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer/Footer';
