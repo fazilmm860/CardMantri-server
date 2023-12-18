@@ -1,10 +1,11 @@
 import React, { useRef, useState } from 'react';
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import reward from '../assests/img/Reward.png'
 import '../assests/css/home.css'
 const Grid = () => {
   const gridData = [
     {
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7tW78EsTlYmkq2tFFgrlgzVXMvrJPVT-nFA&usqp=CAU',
+      image: {reward},
       title: 'Reward Credit Card',
       description: 'Swipe, collect, and experience the rewards of a lifetime.',
     },
@@ -107,7 +108,7 @@ const Grid = () => {
             key={index}
             className={`gridcard flex-shrink-0 w-64   bg-gray-200 border  p-6 hover:scale-105 transition-transform duration-300  rounded-[25px]`}
           >
-           <img src={item.image} alt={`Block ${index + 1}`} className="w-full h-32 object-cover mb-2  rounded-[25px]" />
+           <img src={reward} alt={`Block ${index + 1}`} className="w-full h-32 object-cover mb-2  rounded-[25px]" />
             <h3 className="text-lg font-bold mb-2">{item.title}</h3>
             <p>{item.description}</p>
             <button className="bg-slate-800 no-underline group cursor-pointer relative shadow-2xl shadow-zinc-900 rounded-full p-px text-xs font-semibold leading-6 text-white inline-block">
