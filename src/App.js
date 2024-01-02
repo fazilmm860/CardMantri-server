@@ -10,7 +10,9 @@ import CallToAction from './components/CallToAction';
 import ContactPage from './pages/ContactPage';
 import InnerPage from './pages/InnerPage'
 import InnerContact from './pages/InnerContact';
-import CreditCardForm from './components/CreditCardForm';
+import CreditCardForm from './components/AdminDash/CreditCardForm';
+import AdminPage from './components/AdminDash/AdminPage';
+import ViewCards from './components/AdminDash/ViewCards';
 
 
 
@@ -29,6 +31,8 @@ function App() {
       <Route exact path='/inner-page'element={<InnerPage/>}/>
       <Route exact path='/innerContact'element={<InnerContact/>}/>
       <Route exact path='/add-cards' element={<CreditCardForm/>}/>
+      <Route exact path='/admin' element={<AdminPage/>}/>
+      <Route exact path='/view' element={<ViewCards/>}/>
     </Routes>
    </Router>
      

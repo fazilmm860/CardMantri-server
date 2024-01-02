@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const CreditCardForm = () => {
   const categories = [
     'Select',
@@ -18,6 +21,7 @@ const CreditCardForm = () => {
    cardName:'',
    catergory:'',
    description:'',
+   img:'',
    features: ['', '', '', '', '', '', '', ''],
     eligibility: ['', '', '', '', '', '', '', ''],
     document: ['', '', '', '', ''],
@@ -49,40 +53,68 @@ const CreditCardForm = () => {
     e.preventDefault();
   
     try {
-      const response = await axios.post('http://localhost:9999/api/creditcard/postcreditcard', JSON.stringify(formData), {
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      });
-  
-      if (response && response.data) {
-        console.log('Response:', response.data);
-  
-        if (response.status === 201) {
-          console.log(`Data submitted successfully: ${response.data}`);
-        }
+      // Validation Check
+      if (formData.cardName === '') {
+        toast.warning('Please enter the Card Name', { position: 'top-right' });
+      } else if (formData.catergory === 'Select') {
+        toast.warning('Please Select the Category', { position: 'top-right' });
+      } else if (formData.description === '') {
+        toast.warning('Please enter the Description', { position: 'top-right' });
+      } else if (formData.img === '') {
+        toast.warning('Please enter the Image URL', { position: 'top-right' });
+      } else if (formData.features.some(feature => feature === '')) {
+        toast.warning('Please enter all the Features', { position: 'top-right' });
+      } else if (formData.charge.some(charge => charge === '')) {
+        toast.warning('Please enter all the Charges', { position: 'top-right' });
+      } else if (formData.eligibility.some(eligibility => eligibility === '')) {
+        toast.warning('Please enter all the Eligibility', { position: 'top-right' });
+      } else if (formData.document.some(document => document === '')) {
+        toast.warning('Please enter all the Documents', { position: 'top-right' });
+      } else if (formData.faq.some(faq => faq === '')) {
+        toast.warning('Please enter all the FAQ Questions', { position: 'top-right' });
+      } else if (formData.faqAns.some(faqAns => faqAns === '')) {
+        toast.warning('Please enter all the FAQ Answers', { position: 'top-right' });
       } else {
-        console.error('Invalid response:', response);
-      }
+        // Form data is valid, proceed with submission
   
-      setFormData({
-        cardName: '',
-        catergory:'',
-        description: '',
-        img:'',
-        features: ['', '', '', '', '', '', '', ''],
-        eligibility: ['', '', '', '', '', '', '', ''],
-        document: ['', '', '', '', ''],
-        charge: ['', '', '', '', ''],
-        faq: ['', '', '', '', ''],
-        faqAns: ['', '', '', '', ''],
-      });
+        const response = await axios.post('http://localhost:9999/api/creditcard/postcreditcard', JSON.stringify(formData), {
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        });
+  
+        if (response && response.data) {
+          console.log('Response:', response.data);
+  
+          if (response.status === 201) {
+            console.log(`Data submitted successfully: ${response.data}`);
+          }
+        } else {
+          console.error('Invalid response:', response);
+        }
+  
+        setFormData({
+          cardName: '',
+          catergory: '',
+          description: '',
+          img: '',
+          features: ['', '', '', '', '', '', '', ''],
+          eligibility: ['', '', '', '', '', '', '', ''],
+          document: ['', '', '', '', ''],
+          charge: ['', '', '', '', ''],
+          faq: ['', '', '', '', ''],
+          faqAns: ['', '', '', '', ''],
+        });
+  
+        toast.success('Your Form is Successfully Submitted!', {
+          position: 'top-center',
+        });
+      }
     } catch (error) {
       console.error('Error:', error);
       console.error('Response data (if available):', error.response ? error.response.data : 'N/A');
     }
   };
-  
   return (
     <div className="container ">
  <form className='container 'onSubmit={handleSubmit} >
@@ -226,6 +258,7 @@ const CreditCardForm = () => {
 
       <button type="submit" className="btn btn-primary">Submit</button>
     </form>
+    <ToastContainer/>
     </div>
    
   );
