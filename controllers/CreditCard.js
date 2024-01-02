@@ -48,6 +48,17 @@
             res.status(500).json({message:error.message})
         }
     }
+    const getSpecificCard=async(req,res)=>{
+        try{
+            const {catergory}=req.params;
+
+            //find cards with the same catergory name
+            const cards=await CreditCard.find({catergory:catergory})
+            res.status(200).json(cards)
+        }catch(error){
+            res.status(404).json({message:error.message})
+        }
+    }
     const editCreditCard=async(req,res)=>{
         try{
             const cardId=req.params.id;
@@ -92,4 +103,4 @@
             res.status(400).json({message:error.message})
         }
     }
-    module.exports={dataPost,dataGet,specficDataGet,editCreditCard,deleteCreditCard}
+    module.exports={dataPost,dataGet,specficDataGet,editCreditCard,deleteCreditCard,getSpecificCard}
