@@ -100,8 +100,21 @@ const Navbar = () => {
                 <span>Banks</span> <i><FaChevronDown/></i>
               </a>
               <ul className="hidden">
-                <li><a href="/">Premium Credit Cards</a></li>
-                <li><a href="/">Cashback Credit Cards</a></li>
+              <li><a href="https://www.hdfcbank.com/">HDFC</a></li>
+              <li><a href="https://www.idfcfirstbank.com/">IDFC FIRST BANK</a></li>
+              <li><a href="https://www.icicibank.com/">ICICI BANK</a></li>
+              <li><a href="https://www.axisbank.com/">AXIS BANK</a></li>
+              <li><a href="https://www.onlinesbi.sbi/">SBI BANK</a></li>
+              <li><a href="https://www.indusind.com/in/en/personal.html#">INDUSIND BANK</a></li>
+              <li><a href="https://www.aubank.in/personal-banking/credit-cards">AU CREDIT BANK</a></li>
+              <li><a href="https://www.americanexpress.com/en-in/">AMERICAN EXPRESS</a></li>
+              <li><a href="https://www.online.citibank.co.in/">CITI BANK</a></li>
+              <li><a href="https://www.sc.com/in/">STANDARD CHARTERED BANK</a></li>
+              <li><a href="https://www.rblbank.com/">RBL BANK</a></li>
+              <li><a href="https://www.kotak.com/en/home.html">KOTAK MAHINDRA</a></li>
+              <li><a href="https://www.bankofbaroda.in/">BANK OF BARODA</a></li>
+              <li><a href="https://www.pnbindia.in/">PUNJAB NATIONAL BANK</a></li>
+            
                 {/* Add other card items */}
               </ul>
             </li>
@@ -110,8 +123,17 @@ const Navbar = () => {
                 <span>Cards</span>  <i><FaChevronDown/></i>
               </a>
               <ul className="hidden">
-                <li><a href="/">Premium Credit Cards</a></li>
-                <li><a href="/">Cashback Credit Cards</a></li>
+              <li><a href="">Premium Credit Cards</a></li>
+              <li><a href="">Cashback Credit Cards</a></li>
+              <li><a href="">Reward Credit Cards</a></li>
+              <li><a href="">Fuel Credit Cards</a></li>
+              <li><a href="">Lifestyle Credit Cards</a></li>
+              <li><a href="">Travel Credit Cards</a></li>
+              <li><a href="">Business Credit Cards</a></li>
+              <li><a href="">Entertinment Credit Cards</a></li>
+              <li><a href="">Shopping Cards</a></li>
+              <li><a href="">Secured Credit Cards</a></li>
+              <li><a href="">Prepaid Credit Cards</a></li>
                 {/* Add other card items */}
               </ul>
             </li>

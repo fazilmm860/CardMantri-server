@@ -37,13 +37,13 @@ const About = () => {
       </CardHeader>
       <CardBody>
         <Typography variant="h6" color="#7ed957"  className="mb-4 uppercase text-green-500">
-         Card Mantri
+         Card Mentor
         </Typography>
         <Typography variant="h4" color="blue-gray" className="mb-2 uppercase">
          Unlocking the right card for you...
         </Typography>
         <Typography color="gray" className="mb-8 font-normal">
-        Card Mantri is our credit card expert to guide you through the world of credit
+        Card Mentor is our credit card expert to guide you through the world of credit
          cards and help you make the right financial choices.Card Mantri is your trusted 
          companion on your journey to choose the suitable credit cards from the industry, 
          and make your financial life easier and more rewarding..Card Mantri offers types of credit cards.
