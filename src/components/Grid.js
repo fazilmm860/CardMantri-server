@@ -3,65 +3,76 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import reward from '../assests/img/Reward.png'
 import business from '../assests/img/Business.png'
 import '../assests/css/home.css'
+import { Link } from 'react-router-dom';
 
 const gridData = [
   {
     image: require('../assests/img/Reward.png'),
     title: 'Reward Credit Card',
     description: 'Swipe, collect, and experience the rewards of a lifetime.',
+    to:'/inner-page'
   },
   {
     image: require('../assests/img/Fuel.png'),
     title: 'Fuel Credit Card',
     description: 'Drive smart, save big and fuel your journey.',
+    to:'/inner-page'
   },
   {
     image: require('../assests/img/Cashback.png'),
     title: 'Cashback Credit Card',
-      description: 'Spend Wisely, Get Money Back.',
-    },
-    {
+    description: 'Spend Wisely, Get Money Back.',
+    to:'/inner-page'
+  },
+  {
       image: require('../assests/img/Travel.png'),
       title: 'Travel Credit Card',
-      description: 'Your Ticket to Global Exploration: The Travel Credit Card Way.'
-      
-    },
-    {
+      description: 'Your Ticket to Global Exploration: The Travel Credit Card Way.',
+      to:'/inner-page'
+  },
+  {
       image: require('../assests/img/Business.png'),
       title: 'Business Credit Card',
       description: 'The Credit Card for Entrepreneurs on the Rise.',
-    },
+      to:'/inner-page'
+  },
     {
       image: require('../assests/img/Branded.png'),
       title: 'Co-Branded Credit Card',
       description: ' Experience the Best of Both Worlds with Co-Branded Credit.',
+      to:'/inner-page'
     },
     {
       image: require('../assests/img/Secured.png'),
       title: 'Secured Credit Card',
-      description: 'Your Trusty Companion on the Path to Financial Freedom.'
+      description: 'Your Trusty Companion on the Path to Financial Freedom.',
+      to:'/inner-page'
       
     },
     {
       image: require('../assests/img/Corporate.png'),
       title: 'Corporate Credit Card',
       description: 'Spend Smart, Grow Strong with Corporate Credit.',
+      to:'/inner-page'
     },
     {
       image: require('../assests/img/Student.png'),
       title: 'Student Credit Card',
       description: 'Student Credit: Your Bridge to Financial Well-being.',
+      to:'/inner-page'
     },
     {
       image: require('../assests/img/Premium.png'),
-      title: 'Premium/signature Credit Card',
+      title: 'Premium Credit Card',
       description: 'Unlock a World of Prestige and Privilege.',
+      to:'/inner-page'
     },
   
     {
       image: require('../assests/img/Entertainment.png'),
       title: 'Entertainment Credit Card',
-        description: 'Spend Wisely, Get Money Back.',
+      description: 'Spend Wisely, Get Money Back.',
+      to:'/inner-page'
       },
    
 ];
@@ -104,9 +115,11 @@ const Grid = () => {
         <span className="absolute inset-0 rounded-full bg-[image:radial-gradient(75%_100%_at_50%_0%,rgba(56,189,248,0.6)_0%,rgba(56,189,248,0)_75%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
       </span>
       <div className="relative flex space-x-2 items-center z-10 rounded-full bg-zinc-950 py-0.5 px-4 ring-1 ring-white/10">
+      <Link to={`/inner-page/${item.title}`}>
         <span>
           learn More
         </span>
+        </Link>
         <svg
           fill="none"
           height="16"

@@ -15,7 +15,7 @@ const About = () => {
             <section id="about" className=" p-10">
             <div className="flex flex-col items-center justify-center" data-aos="fade-up">
                 <div className="section-header">
-                    <h2 className="section-title text-white">Meet Card Mantri </h2>
+                    <h2 className="section-title text-white">Meet Card Mentor </h2>
                     <h5 className='section-title'> Your Credit Card Guru !</h5>
                     <span className="section-divider"></span>
                 
@@ -44,9 +44,9 @@ const About = () => {
         </Typography>
         <Typography color="gray" className="mb-8 font-normal">
         Card Mentor is our credit card expert to guide you through the world of credit
-         cards and help you make the right financial choices.Card Mantri is your trusted 
+         cards and help you make the right financial choices.Card Mentor is your trusted 
          companion on your journey to choose the suitable credit cards from the industry, 
-         and make your financial life easier and more rewarding..Card Mantri offers types of credit cards.
+         and make your financial life easier and more rewarding..Card Mentor offers types of credit cards.
         </Typography>
         <a href="#" className="inline-block">
           <Button variant="text" className="flex items-center gap-2  text-green-500 hover:bg-gray-800

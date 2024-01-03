@@ -1,12 +1,14 @@
   import React, { useEffect, useState } from 'react';
   import axios from 'axios';
 import InnerContact from './InnerContact';
+import { useParams } from 'react-router-dom';
 
 
   const YourComponent = () => {
+    const {catergory}=useParams()
     const [cardData, setCardData] = useState([]); 
     const [activeTab, setActiveTab] = useState(-1);
-
+  
     const handleToggle = (idx) => {
       setActiveTab(activeTab === idx ? -1 : idx);
     };
@@ -36,34 +38,34 @@ import InnerContact from './InnerContact';
       </li>
     );
 
-  const fetchData=async()=>{
-    try{
-      const response=await axios.get(`http://localhost:9999/api/creditcard/getcreditcard`)
-      console.log('Fetched Data:', response.data); 
-      setCardData(response.data)
-     
-    }catch(error){
-      console.error(`Error in fetching Data:${error}`);
-    }
-  }
-
+  
   // Call the fetchData function once the component mounts
   useEffect(() => {
-    fetchData();
-  }, []);
+   const fetdata=async()=>{
+    try {
+      const response=await axios.get(`http://localhost:9999/api/creditcard/getcard/${catergory}`)
+      setCardData(response.data)
+    } catch (error) {
+      console.error(`Error in fetching data:`,error);
+    }
+   }
+   fetdata();
+  }, [catergory]);
     return (
     <>
-    
+   
       <div className="p-6 bg-slate-500">
         {/* Card Section */}
         {Array.isArray(cardData) && cardData.length > 0 ? ( cardData.map((item, index) => (
           <div key={index}>
+             <h5>{item.catergory}</h5>  
           <div className="bg-white shadow-orange p-4 rounded-lg mb-4 flex">
   <div className="flex-1 flex">
     {/* Left side for CardName and Description */}
     <div className="flex-1">
       <h2 className="text-xl font-bold mb-2">{item.cardName}</h2>
       <p>{item.description}</p>
+      
     </div>
     
     {/* Right side for Image */}

@@ -115,6 +115,7 @@ useEffect(()=>{
   <div className="flex-1">
     <h2 className="text-xl font-bold mb-2">{item.cardName}</h2>
     <p>{item.description}</p>
+    <h5>{item.catergory}</h5>
   </div>
   
   {/* Right side for Image */}

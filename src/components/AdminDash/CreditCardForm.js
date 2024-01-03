@@ -17,6 +17,41 @@ const CreditCardForm = () => {
     'Student Credit Card',
     'Premium Credit Card',
   ];
+  const cat=[
+    {
+      choose:'Select',
+    },
+    {
+      choose:'Reward Credit Card',
+    },
+    {
+      choose:"Fuel Credit Card",
+    },
+    {
+      choose:'Cashback Credit Card',
+    },
+    {
+      choose:'Travel Credit Card',
+    },
+    {
+      choose:'Business Credit Card',
+    },
+    {
+      choose:'Co-Branded Credit Card',
+    },
+    {
+      choose:'Secured Credit Card',
+    },
+    {
+      choose:'Corporate Credit Card',
+    },
+    {
+      choose:'Student Credit Card',
+    },
+    {
+      choose:'Premium Credit Card',
+    }
+  ]
   const [formData, setFormData] = useState({
    cardName:'',
    catergory:'',
@@ -142,8 +177,8 @@ const CreditCardForm = () => {
         onChange={handleInputChange}
         required
         >
-          {categories.map((item,index)=>(
-            <option key={index} value={item}>{item}</option>
+          {cat.map((item,index)=>(
+            <option key={index} value={item.choose}>{item.choose}</option>
           ))}
           
         </select>

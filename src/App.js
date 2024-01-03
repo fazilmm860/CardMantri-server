@@ -28,7 +28,7 @@ function App() {
       <Route exact path='/compare-card' element={<CardComparison/>}/>
       <Route exact path='/nav' element={<Navbar/>}/>
       <Route exact path='/contact' element={<ContactPage/>}/>
-      <Route exact path='/inner-page'element={<InnerPage/>}/>
+      <Route exact path='/inner-page/:catergory'element={<InnerPage/>}/>
       <Route exact path='/innerContact'element={<InnerContact/>}/>
       <Route exact path='/add-cards' element={<CreditCardForm/>}/>
       <Route exact path='/admin' element={<AdminPage/>}/>
