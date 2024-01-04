@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FaCheckCircle, FaChevronLeft } from 'react-icons/fa';
 import '../assests/css/home.css'
 import image1 from '../assests/img/compare.png'
@@ -54,6 +54,19 @@ const CardComparison = React.forwardRef((props,ref) => {
       select:'Platinum Credit Cards',
     },
   ]
+  const [selectedCard1,setSelectedCard1]=useState('');
+  const [selectedCard2,setSelectedCard2]=useState('');
+  const [showSecondDropdrown,setShowSecondDropdown]=useState(false);
+
+  const handleFirstCardSelect=(event)=>{
+    const selectedValue=event.target.value;
+    setSelectedCard1(selectedValue);
+    setShowSecondDropdown(true);
+  }
+  const handleSecondCardSelect=(event)=>{
+    const selectedValue=event.target.value;
+    setSelectedCard2(selectedValue)
+  };
   return (
     <>
     <div ref={ref}>
@@ -89,20 +102,39 @@ const CardComparison = React.forwardRef((props,ref) => {
                   <i></i> <h6 className='cardHead'>Card-1</h6> <h6 className='cardHead2'>Card-2</h6>
                 </li>
                 <li>
-                  <i></i><select className='cardSelect bg-slate-300 '>
-                      {card.map((item)=>(
-                      <option>{item.select}</option>
+                  <i></i><select className='cardSelect bg-slate-300 'onChange={handleFirstCardSelect}>
+                      {card.map((item,index)=>(
+                      <option key={index} value={item.select}>{item.select}</option>
                       ))}
                     </select>
+                    {/*Show the second dropdown when the first card is selected */}
+                    {showSecondDropdrown &&(
+                      <select className='cardSelect bg-slate-300' onChange={handleSecondCardSelect}>
+                        <option value=''>Select </option>
+                        {card.map((item,index)=>(
+                          <option key={index} value={item.select}>{item.select}</option>
+                        ))}
+                      </select>
+                    )}
+
+                    
                                            <img src={image1}
                                                 className='cardImage'
                                            ></img>
 
-                     <select className='cardSelect  bg-slate-300'>
-                     {card.map((item)=>(
-                      <option>{item.select}</option>
+                     <select className='cardSelect  bg-slate-300'onChange={handleFirstCardSelect}>
+                     {card.map((item,index)=>(
+                      <option key={index} value={item.select}>{item.select}</option>
                       ))}
                         </select>
+                        {showSecondDropdrown &&(
+                      <select className='cardSelect bg-slate-300' onChange={handleSecondCardSelect}>
+                        <option value=''>Select </option>
+                        {card.map((item,index)=>(
+                          <option key={index} value={item.select}>{item.select}</option>
+                        ))}
+                      </select>
+                    )}
                 </li>
                 <li>
                   <i></i> <button className='cardButton '>Compare</button> 
