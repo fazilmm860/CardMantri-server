@@ -13,6 +13,7 @@ import InnerContact from './pages/InnerContact';
 import CreditCardForm from './components/AdminDash/CreditCardForm';
 import AdminPage from './components/AdminDash/AdminPage';
 import ViewCards from './components/AdminDash/ViewCards';
+import Member from './components/membership/Member';
 
 
 
@@ -33,6 +34,7 @@ function App() {
       <Route exact path='/add-cards' element={<CreditCardForm/>}/>
       <Route exact path='/admin' element={<AdminPage/>}/>
       <Route exact path='/view' element={<ViewCards/>}/>
+      <Route exact path='/member' element={<Member/>}/>
     </Routes>
    </Router>
      
