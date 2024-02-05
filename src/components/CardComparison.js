@@ -110,7 +110,7 @@ const CardComparison = React.forwardRef((props,ref) => {
                     {/*Show the second dropdown when the first card is selected */}
                     {showSecondDropdrown &&(
                       <select className='cardSelect bg-slate-300' onChange={handleSecondCardSelect}>
-                        <option value=''>Select </option>
+                        
                         {card.map((item,index)=>(
                           <option key={index} value={item.select}>{item.select}</option>
                         ))}
