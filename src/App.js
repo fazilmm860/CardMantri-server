@@ -35,6 +35,7 @@ function App() {
       <Route exact path='/admin' element={<AdminPage/>}/>
       <Route exact path='/view' element={<ViewCards/>}/>
       <Route exact path='/member' element={<Member/>}/>
+      <Route exact path='/call' element={<CallToAction/>}/>
     </Routes>
    </Router>
      

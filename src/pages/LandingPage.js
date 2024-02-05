@@ -79,7 +79,7 @@ const LandingPage = () => {
             Copyright &copy; <strong>Fzcreations</strong>. All Rights Reserved
           </div>
           <div className="credits">
-            Designed by <a href="#">Fzcreations</a>
+            Designed by <a href="fzcreator.com">Fzcreators</a>
           </div>
         </div>
         <div className="lg:ml-auto">
